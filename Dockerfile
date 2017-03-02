@@ -1,6 +1,6 @@
 FROM ubuntu
 
-MAINTAINER Walter Policarpio <wcpolicarpio@gmail.com>
+MAINTAINER Walter Policarpio at Morgan Solar Inc.<wcpolicarpio@gmail.com>
 
 RUN apt-get update && apt-get install -y openssh-server
 
@@ -12,6 +12,7 @@ CMD /usr/sbin/sshd -D
 
 USER nobody 
 WORKDIR /tmp
-ENV walter "Policarpio"
+ENV FOO "bar"
+
 
 EXPOSE 2222
